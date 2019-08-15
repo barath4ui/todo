@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>SpaceX</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet"
+    type="text/css">
+
+  <!-- Custom styles for this template -->
+  <link href="scss/landing-page.css" rel="stylesheet">
+
+  <style>
+    .list-item {
+      text-align: left;
+    }
+
+    .list-item h3 {
+      float: left;
+    }
+
+    .list-item i {
+      margin-top: 10px;
+      float: right;
+      font-size: 22px;
+    }
+
+    .list-group {
+      list-style: none;
+      border: 1px solid #ccc;
+      margin: 0 auto;
+    }
+
+    .list-group li {
+      border-top: 1px solid #ccc;
+      padding: 10px;
+      background: #fff;
+    }
+
+    .list-group li:first-child {
+      border-top: 0;
+    }
+
+    .empty-round {
+      width: 50px;
+      float: left;
+      border-radius: 50%;
+    }
+
+    li .empty-round{
+      cursor: pointer;
+      position: relative;
+    }
+    .icon-check{
+      font-size: 50px;
+      left: -1px;
+      color: #fff;
+      top: -2px;
+      position: absolute;
+      opacity: 0;
+      
+    }
+    .tick-active{
+      background: blue;
+    }
+    .tick-active + .form-box{
+      text-decoration: line-through;
+    }
+    .tick-active .icon-check{
+      opacity: 1;
+    }
+    .form-box {
+      float: right;
+      width: calc(100% - 60px);
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Masthead -->
+  <header id="bgChange" class="masthead text-white text-center">
+    <div class="overlay"></div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12 mx-auto text-left">
+          <h1>My Day</h1>
+          <h3>Thursday, 15 August</h3>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Icons Grid -->
+  <section class="features-icons bg-light text-center">
+    <div class="container-fluid">
+      <div class="list-wrap">
+        <div id="root">
+          <ul class="list-group">
+            <li>
+              <div class="todo-item">
+                <span class="form-control form-control-lg empty-round" onclick="tickFun(this)">
+                  <i class="icon-check"></i>
+                </span>
+                <span class="form-control form-control-lg form-box text-left">Morning Exersice</span>
+              </div>
+            </li>
+            <li>
+              <div class="todo-item">
+                <span class="form-control form-control-lg empty-round" onclick="tickFun(this)">
+                  <i class="icon-check"></i>
+                </span>
+                <span class="form-control form-control-lg form-box text-left">Reading Book</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="footer bg-light">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12 h-100 text-center text-lg-left my-auto">
+          <form>
+            <div class="form-row">
+              <div class="col-md-10 mb-2 mb-md-0">
+                <span class="form-control form-control-lg empty-round  "></span>
+                <input type="text" id="txtbox" class="form-control form-control-lg form-box " placeholder="Add task">
+              </div>
+              <div class="col-md-2  ">
+                <button type="button" id="addBtn" onclick="addfun()"
+                  class="btn btn-block btn-lg btn-primary">Add</button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <script src="js/todo.js"></script>
+  <script>
+  function tickFun(tickbox){
+    tickbox.classList.toggle("tick-active");
+  }
+  </script>
+
+</body>
+
+</html>
